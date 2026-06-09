@@ -356,8 +356,8 @@ footer a{color:var(--teal);text-decoration:none;}
     <div class="video-wrap rev" id="vc">
       <div class="video-ph" id="vph" onclick="loadVid()">
         <div class="play"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><polygon points="9,6 21,13 9,20" fill="#000"/></svg></div>
-        <p style="font-size:15px;color:#DDE6F0;font-weight:600;">Video ansehen</p>
-        <p style="font-size:13px;color:#5A6A7A;">Klick zum Abspielen</p>
+        <p style="font-size:15px;color:#DDE6F0;font-weight:600;">Video laden und ansehen</p>
+        <p style="font-size:13px;color:#5A6A7A;max-width:420px;text-align:center;line-height:1.5;">Mit dem Klick wird das YouTube-Video geladen. Dabei können Daten an YouTube übertragen werden.</p>
       </div>
     </div>
     <p class="video-note">▶ Schau rein – kostenlos & unverbindlich</p>
@@ -655,7 +655,7 @@ footer a{color:var(--teal);text-decoration:none;}
 
 <footer>
   <p style="margin-bottom:8px;"><a href="https://zyraone.ch">zyraone.ch</a> · NIA Swiss GmbH</p>
-  <p><a href="https://zyraone.ch/datenschutzerklaerung/">Datenschutz</a> · <a href="https://zyraone.ch/impressum/">Impressum</a> · <a href="mailto:hello@zyraone.ch">hello@zyraone.ch</a></p>
+  <p><a href="datenschutz.html">Datenschutz</a> · <a href="https://zyraone.ch/impressum/">Impressum</a> · <a href="mailto:hello@zyraone.ch">hello@zyraone.ch</a></p>
 </footer>
 
 <script>
@@ -664,7 +664,7 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
 function faq(btn){const item=btn.closest('.fq');const open=item.classList.contains('open');document.querySelectorAll('.fq.open').forEach(el=>el.classList.remove('open'));if(!open)item.classList.add('open');}
 
 function loadVid(){
-  const url='https://www.youtube.com/embed/6cuX9EqIwXI?autoplay=1&rel=0';
+  const url='https://www.youtube-nocookie.com/embed/6cuX9EqIwXI?autoplay=1&rel=0';
   const c=document.getElementById('vc');
   const ph=document.getElementById('vph');
   const iframe=document.createElement('iframe');
