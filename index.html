@@ -13,7 +13,8 @@ body{background:var(--bg);color:var(--off);font-family:'Inter',sans-serif;line-h
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,17,23,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Playfair Display',serif;font-size:22px;color:var(--teal);font-weight:700;letter-spacing:.04em;text-decoration:none;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{display:block;width:150px;height:auto;}
 .nav-cta{background:var(--teal);color:#000;font-size:13px;font-weight:700;padding:9px 22px;border-radius:8px;text-decoration:none;transition:.2s;}
 .nav-cta:hover{opacity:.85;}
 
@@ -249,6 +250,8 @@ footer a{color:var(--teal);text-decoration:none;}
 
 /* Mobile orbit */
 @media(max-width:860px){
+  nav{padding:12px 18px;}
+  .nav-logo img{width:122px;}
   .orbit-scene{height:auto;min-height:500px;position:relative;padding:20px;}
   .mc{position:static;width:130px!important;display:inline-block;margin:6px;vertical-align:top;}
   .orbit-avatar{position:relative;transform:none;left:auto;top:auto;width:260px;margin:0 auto 20px;}
@@ -264,7 +267,9 @@ footer a{color:var(--teal);text-decoration:none;}
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Zyra</a>
+  <a href="#" class="nav-logo" aria-label="Zyra System">
+    <img src="assets/zyra-logo-white.png" alt="Zyra System">
+  </a>
   <a href="#pricing" class="nav-cta">Jetzt sichern →</a>
 </nav>
 
